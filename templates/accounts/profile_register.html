@@ -1,0 +1,27 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block page_content %}
+    <div id="contact" class="section db">
+        <div class="container-fluid">
+            <div class="section-title text-center">
+                <h3>REGISTER</h3>
+                <p>Step one create your account</p>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="contact_form">
+                        <div id="message"></div>
+                        <form id=""  method="POST">
+                                {% csrf_token %}
+                                {{ form }}
+                                <button  class="sim-btn hvr-radial-in"  type="submit" >REGISTER</button>
+
+						</form>
+                    </div>
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+{% endblock %}
