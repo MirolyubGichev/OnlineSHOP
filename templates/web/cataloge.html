@@ -1,16 +1,17 @@
 {% extends 'base/base.html' %}
 {% load static %}
+{% load bootstrap5 %}
 
 {% block page_content %}
     <div class="item slider-screen">
         <div class="slider-img-full">
-            <img src={% static "uploads/slider-02.jpg" %}  alt="" />
+            <img src={% static "uploads/slider-02.jpg" %}  alt=""/>
         </div>
         <div class="container">
             <div class="slider-content text-white">
                 <div class="in-box">
-                    <h2>Variety of quality products </h2>
-                    <p>Your favorite shop on one click destination</p>
+                    <h2>CATALOGUE</h2>
+                    <p>Best products on the market</p>
 
                 </div>
             </div>
@@ -19,170 +20,82 @@
     <div id="menu" class="section lb">
         <div class="container-fluid">
             <div class="section-title text-center">
-                <h3>Cataloge</h3>
-                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
-            </div><!-- end title -->
-			<div class="gallery-menu text-center row">
-				<div class="col-md-12">
-					<div class="button-group filter-button-group">
-						<button class="hvr-radial-in active" data-filter="*">All</button>
-						<button class="hvr-radial-in" data-filter=".gal_a">Starters</button>
-						<button class="hvr-radial-in" data-filter=".gal_b">Shops</button>
-						<button class="hvr-radial-in" data-filter=".gal_c">Main Course </button>
-						<button class="hvr-radial-in" data-filter=".gal_d">Desserts</button>
-					</div>
-				</div>
-			</div>
-            <div class="row">
-				<div class="col-md-3">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<img src={% static "uploads/menu-img-01.jpg"%} class="img-fluid" alt="" />
-						</div>
-						<h2>Vegetable Name..</h2>
-						<a class="hvr-radial-in" href="#">$ 18.00</a>
-					</div>
-                </div><!-- end col -->
+                <h2>Variety of quality products </h2>
+                <p>Your favorite shop on one click destination</p>
+                <div class="gallery-menu text-center row">
+                    <div class="col-md-12">
+                        <div class="button-group filter-button-group"><h4>SHOW : </h4>
+                            <button class="hvr-radial-in active" data-filter="*">All</button>
+                            <button class="hvr-radial-in" data-filter=".Vegetable">Vegetables</button>
+                            <button class="hvr-radial-in" data-filter=".Meat">Meat</button>
+                            <button class="hvr-radial-in" data-filter=".Milk ">Milk products</button>
+                            <button class="hvr-radial-in" data-filter=".BIO ">BIO products</button>
+                            <button class="hvr-radial-in" data-filter=".Non ">Non food</button>
+                        </div>
+                    </div>
 
-                <div class="col-md-3">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<img src={% static "uploads/menu-img-02.jpg" %} class="img-fluid" alt="" />
-						</div>
-						<h2>Vegetable Name..</h2>
-						<a class="hvr-radial-in" href="#">$ 20.00</a>
-					</div>
-                </div><!-- end col -->
-				<div class="col-md-3">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<img src={% static "uploads/menu-img-03.jpg" %} class="img-fluid" alt="" />
-						</div>
-						<h2>Vegetable Name..</h2>
-						<a class="hvr-radial-in" href="#">$ 10.00</a>
-					</div>
-                </div><!-- end col -->
-				<div class="col-md-3">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<img src={% static "uploads/menu-img-04.jpg" %} class="img-fluid" alt="" />
-						</div>
-						<h2>Vegetable Name..</h2>
-						<a class="hvr-radial-in" href="#">$ 21.00</a>
-					</div>
-                </div><!-- end col -->
-				<div class="col-md-3">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<img src={% static "uploads/menu-img-05.jpg"%} class="img-fluid" alt="" />
-						</div>
-						<h2>Vegetable Name..</h2>
-						<a class="hvr-radial-in" href="#">$ 22.00</a>
-					</div>
-                </div><!-- end col -->
-				<div class="col-md-3">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<img src={% static "uploads/menu-img-06.jpg"%} class="img-fluid" alt="" />
-						</div>
-						<h2>Vegetable Name..</h2>
-						<a class="hvr-radial-in" href="#">$ 24.00</a>
-					</div>
-                </div><!-- end col -->
-				<div class="col-md-3">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<img src={% static "uploads/menu-img-07.jpg"%} class="img-fluid" alt="" />
-						</div>
-						<h2>Vegetable Name..</h2>
-						<a class="hvr-radial-in" href="#">$ 28.00</a>
-					</div>
-                </div><!-- end col -->
-				<div class="col-md-3">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<img src={% static "uploads/menu-img-08.jpg"%} class="img-fluid" alt="" />
-						</div>
-						<h2>Vegetable Name..</h2>
-						<a class="hvr-radial-in" href="#">$ 30.00</a>
-					</div>
-                </div><!-- end col -->
-            <div class="row">
-				<div class="col-md-3">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<img src={% static "uploads/menu-img-01.jpg"%} class="img-fluid" alt="" />
-						</div>
-						<h2>Vegetable Name..</h2>
-						<a class="hvr-radial-in" href="#">$ 18.00</a>
-					</div>
-                </div><!-- end col -->
+                </div>
+            </div>
+        </div>
+    </div><!-- end title -->
+    <div class="gallery-list row">
+        {% for product in products %}
 
-                <div class="col-md-3">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<img src={% static "uploads/menu-img-02.jpg" %} class="img-fluid" alt="" />
-						</div>
-						<h2>Vegetable Name..</h2>
-						<a class="hvr-radial-in" href="#">$ 20.00</a>
-					</div>
-                </div><!-- end col -->
-				<div class="col-md-3">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<img src={% static "uploads/menu-img-03.jpg" %} class="img-fluid" alt="" />
-						</div>
-						<h2>Vegetable Name..</h2>
-						<a class="hvr-radial-in" href="#">$ 10.00</a>
-					</div>
-                </div><!-- end col -->
-				<div class="col-md-3">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<img src={% static "uploads/menu-img-04.jpg" %} class="img-fluid" alt="" />
-						</div>
-						<h2>Vegetable Name..</h2>
-						<a class="hvr-radial-in" href="#">$ 21.00</a>
-					</div>
-                </div><!-- end col -->
-				<div class="col-md-3">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<img src={% static "uploads/menu-img-05.jpg"%} class="img-fluid" alt="" />
-						</div>
-						<h2>Vegetable Name..</h2>
-						<a class="hvr-radial-in" href="#">$ 22.00</a>
-					</div>
-                </div><!-- end col -->
-				<div class="col-md-3">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<img src={% static "uploads/menu-img-06.jpg"%} class="img-fluid" alt="" />
-						</div>
-						<h2>Vegetable Name..</h2>
-						<a class="hvr-radial-in" href="#">$ 24.00</a>
-					</div>
-                </div><!-- end col -->
-				<div class="col-md-3">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<img src={% static "uploads/menu-img-07.jpg"%} class="img-fluid" alt="" />
-						</div>
-						<h2>Vegetable Name..</h2>
-						<a class="hvr-radial-in" href="#">$ 28.00</a>
-					</div>
-                </div><!-- end col -->
-				<div class="col-md-3">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<img src={% static "uploads/menu-img-08.jpg"%} class="img-fluid" alt="" />
-						</div>
-						<h2>Vegetable Name..</h2>
-						<a class="hvr-radial-in" href="#">$ 30.00</a>
-					</div>
-                </div><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end section -->
+            <div class=" col-md-2,5 col-sm-2,5  gallery-grid {{ product.type }}  ">
+                <div class="gallery-single fix">
+                    <div class="card" style="width: 20rem;">
+                        {% if product.promo == 1 %}
+                            <h3>Product in <span class="badge badge-warning">PROMO</span></h3>
+                        {% endif %}
+                        <img src="{% static "uploads/menu-img-02.jpg" %}" class="card-img-top"
+                             alt="{% static "uploads/menu-img-02.jpg" %}">
+                        <div class="card-body">
+                            <h2 class="card-title">{{ product.name }}</h2>
+                            <p class="card-text">
+                            <h4>Price : {{ product.price }}$</h4>
+                            {% if product.stock > 0 %}
+                                <h3>Product <span class="badge badge-success">IN STOCK</span></h3>
+                            {% else %}
+                                <h3>Product <span class="badge badge-danger">OUT OF STOCK</span></h3>
+                            {% endif %}
+                            </p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Type: {{ product.type }}</li>
+                            <li class="list-group-item">Product origin: {{ product.origin }}</li>
+                            {#                        <li class="list-group-item">Price: {{ product.price }}$</li>#}
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Buy
+                                Product</a>
+                            <a href="{% url 'product details' product.barcode %}"
+                               class="btn btn-secondary btn-lg active">Details</a>
+                            {#                          <a href="#" class="card-link">Add to car</a>#}
+                            {#                          <a href="{% url 'product details' product.barcode %}" class="card-link">Details</a>#}
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end col -->
+        {% endfor %}
+    </div>
+    <nav aria-label="...">
+        {% if is_paginated %}
+            <div class="pagination">
+                        <span class="page-links">
+                            {% if page_obj.has_previous %}
+                                <a href="{% url 'products cataloge' %}?page={{ page_obj.previous_page_number }}">previous</a>
+                            {% endif %}
+                            <span class="page-current">
+                                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                            </span>
+                            {% if page_obj.has_next %}
+                                <a href="{% url 'products cataloge' %}?page={{ page_obj.next_page_number }}">next</a>
+                            {% endif %}
+                        </span>
+            </div>
+        {% endif %}
+    </nav>
+
+
 
 {% endblock %}

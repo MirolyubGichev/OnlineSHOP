@@ -32,12 +32,11 @@ class User_account(auth_models.AbstractUser , auth_models.PermissionsMixin):
 
         max_length= max([len(x) for x , _ in ACCOUNT_TYPES]),
         default= CLIENT,
-        choices= ACCOUNT_TYPES
+        choices=ACCOUNT_TYPES
 
     )
     USERNAME_FIELD = 'username'
     objects =  YouCookUserManager
-
 
 
 

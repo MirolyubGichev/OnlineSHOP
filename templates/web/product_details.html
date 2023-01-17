@@ -1,0 +1,138 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block page_content %}
+
+
+    <div class="container-fluid" xmlns="http://www.w3.org/1999/html">
+        <div class="section-title text-center">
+            <h3>OFFERTS</h3>
+            <h1></h1>
+            <h2>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</h2>
+        </div><!-- end title -->
+
+        <div class="gallery-menu text-center row">
+            <div class="col-md-12">
+                {% if user.account_type == "Content admin" %}
+                    <div class="button-group filter-button-group">ADMIN MENU
+
+                        <a class="hvr-radial-in active" href="{% url 'product edit' product.pk %}" data-filter="*">Edit
+                            Product</a>
+                        <a class="hvr-radial-in" href="{% url 'product delete' %}" data-filter=".gal_b">Delete
+                            product</a>
+                        {#                        <a class="hvr-radial-in" data-filter=".gal_c">Make Promo</a>#}
+                    </div>
+                {% else %}
+                    <div></div>
+
+                {% endif %}
+
+
+            </div>
+        </div>
+
+
+        <div class="container bootstrap snippets bootdey">
+            <div class="row align-content-center">
+                <div class="col-md-7 align-content-center">
+                    <div class="panel panel-default align-content-center">
+                        <div class="panel-body align-content-center">
+                            <div class="row align-content-center">
+                                <div class="col-xs-12 col-sm-2">
+                                    <h2 class="text-primary"><b><span
+                                            class="glyphicon glyphicon-user"></span> {{ product.name }}</b></h2>
+                                    {#                                <p><strong><span class="glyphicon glyphicon-ok-circle"></span>Price: </strong>{{ product.price}}</p>#}
+                                </div>
+                                <div class="row align-content-center">
+
+                                    <div class="col-xs-5 col-sm-10 text-center">
+                                        {#                                <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="" class="center-block img-circle img-responsive profile-img">#}
+                                        <div class="card">
+                                            <img src="{% static "uploads/menu-img-02.jpg" %}" class="card-img-top"
+                                                 alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a longer card with supporting text below as
+                                                    a natural lead-in to additional content. This content is a little
+                                                    bit longer.</p>
+                                            </div>
+                                        </div><!--/col-->
+                                        <div class="row align-content-center">
+                                            <div class="col-xs-12 col-sm-2">
+                                                <h2 class="text-primary"><b><span
+                                                        class="glyphicon glyphicon-user"></span> {{ product.name }}</b>
+                                                </h2>
+                                                <p><strong><span class="glyphicon glyphicon-ok-circle"></span>Price:
+                                                </strong>{{ product.price }}</p>
+
+                                            </div>
+                                            <div class="col-xs-12 col-sm-2">
+                                                <h2 class="text-primary"><b><span
+                                                        class="glyphicon glyphicon-user"></span> {{ product.name }}</b>
+                                                </h2>
+
+                                            </div>
+                                            <div class="col-xs-12 col-sm-2">
+                                                <h2 class="text-primary"><b><span
+                                                        class="glyphicon glyphicon-user"></span> {{ product.name }}</b>
+                                                </h2>
+
+                                            </div>
+                                            <div class="col-xs-12 col-sm-2">
+                                                <h2 class="text-primary"><b><span
+                                                        class="glyphicon glyphicon-user"></span> {{ product.name }}</b>
+                                                </h2>
+
+                                            </div>
+                                        </div><!--/col-->
+
+
+                                        <div class="row-xs-12 col-sm-0 align-items-center">
+                                            {#                            <h2><strong> 10,7K </strong></h2>#}
+                                            {#                            <p><small>Followers</small></p>#}
+                                            <a class="btn btn-success btn-block"
+                                               href="{% url 'address register' %}"><span
+                                                    class="fa fa-plus-circle"></span> Buy product </a>
+                                            <a class="btn btn-danger btn-block"
+                                               href="{% url 'address register' %}"><span class="fa fa-!-circle"></span>
+                                                !REPORT! </a>
+                                        </div><!--/col-->
+                                        {#                        <div class="row-xs-12 col-sm-3">#}
+                                        {#                            <h2><strong>35</strong></h2>#}
+                                        {#                            <p><small>Following</small></p>#}
+                                        {#                            <a class="btn btn-info btn-block" href="{% url 'profile edit' user.id%}"><span class=""></span> Cataloge </a>#}
+                                        {#                            <a class="btn btn-info btn-block" href="{% url 'profile edit' user.id%}"><span class=""></span> Cataloge </a>#}
+                                        {#                        </div><!--/col-->#}
+                                        {#                        <div class="col-xs-12 col-sm-4">#}
+                                        {#                            <h2><strong>58</strong></h2>#}
+                                        {#                            <p><small>Snippets</small></p>#}
+                                        {#                            <a type="button" class="btn btn-primary btn-block" href="{% url 'password edit' user.id %}"><span class="fa fa-gear"></span> Refresh </a>#}
+                                        {#                        </div><!--/col-->#}
+                                    </div><!--/row-->
+                                </div>
+                                {#            <div class="row">#}
+                                {#                  <div class="col-xs-12 col-sm-2 align-content-center">#}
+                                {#                                        <h2 class="text-primary"><b><span class="glyphicon glyphicon-user"></span> {{ product.name }}</b></h2>#}
+                                {#                                        <p><strong><span class="glyphicon glyphicon-ok-circle"></span>Price: </strong>{{ product.price}}</p>#}
+                                {#                                        <p><strong><span class="glyphicon glyphicon-certificate"></span>Phone: </strong></p></div>#}
+                                {##}
+                                {#                  <div class="col-xs-12 col-sm-2 align-content-center">#}
+                                {#                                        <h2 class="text-primary"><b><span class="glyphicon glyphicon-user"></span> {{ product.name }}</b></h2>#}
+                                {#                                        <p><strong><span class="glyphicon glyphicon-ok-circle"></span>Price: </strong>{{ product.price}}</p>#}
+                                {#                                        <p><strong><span class="glyphicon glyphicon-certificate"></span>Phone: </strong></p></div>#}
+                                {##}
+                                {#      </div>#}
+                            </div><!--/panel-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col ">
+                    <h2>EAXMPLE</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem libero magnam obcaecati quisquam! Nihil numquam quidem reprehenderit sint sit? Aperiam beatae, consectetur dicta iste mollitia sapiente sunt vel voluptas.</p>
+
+
+                </div>
+
+            </div>
+        </div>
+{% endblock %}

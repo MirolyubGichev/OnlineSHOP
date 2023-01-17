@@ -1,0 +1,83 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block page_content %}
+
+
+    <div class="container-fluid" xmlns="http://www.w3.org/1999/html">
+        <div class="section-title text-center">
+            <h3>OFFERTS</h3>
+            <h1></h1>
+            <h2>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</h2>
+        </div><!-- end title -->
+
+        <div class="gallery-menu text-center row">
+            <div class="col-md-12">
+                {% if user.account_type == "Content admin" %}
+                    <div class="button-group filter-button-group">ADMIN MENU
+
+                        <a class="hvr-radial-in active" href="{% url 'product post' %}" data-filter="*">Add product</a>
+                        <a class="hvr-radial-in" href="{% url 'product delete' %}" data-filter=".gal_b">Delete product</a>
+                        <a class="hvr-radial-in" data-filter=".gal_c">Make Promo</a>
+                    </div>
+                {% else %}
+                    <div></div>
+
+                {% endif %}
+
+
+            </div>
+        </div>
+
+
+<div class="container bootstrap snippets bootdey">
+  <div class="row">
+      <div class="col-md-7">
+      <div class="panel panel-default">
+      <div class="panel-body">
+                  <div class="row">
+                        <div class="col-xs-12 col-sm-8">
+                            <h2 class="text-primary"><b><span class="glyphicon glyphicon-user"></span> {{user.profile_acc.user_first_name}} {{ user.profile_acc.user_last_name }}</b></h2>
+                            <p><strong><span class="glyphicon glyphicon-ok-circle"></span>Email: </strong>{{ user.profile_acc.user_email }}</p>
+                            <p><strong><span class="glyphicon glyphicon-certificate"></span>Phone: </strong>{{ user.profile_acc.user_phone}}</p>
+                            {% if addresses %}
+                                {% for address in addresses %}
+                                    <p><strong><span class="glyphicon glyphicon-thumbs-up"></span>Address: </strong></p>
+                                    <p><strong><span class="glyphicon glyphicon-thumbs-up"></span>country:{{ address.country }} </strong></p>
+                                    <p><strong><span class="glyphicon glyphicon-thumbs-up"></span>city:{{ address.city }} </strong></p>
+                                    <p><strong><span class="glyphicon glyphicon-thumbs-up"></span>address:{{ address.address |truncatechars:30 }} </strong></p>
+                                    <p><strong><span class="glyphicon glyphicon-thumbs-up"></span>additional_info:{{ address.additional_info |truncatechars:30 }} </strong></p>
+                                    <a type="button" class="btn btn-primary btn-block" href="{% url 'address edit' address.id %}"><span class="fa fa-gear"></span> Edit Address </a>
+                                    <a type="button" class="btn btn-primary btn-block" href="{% url 'address delete' address.id %}"><span class="fa fa-gear"></span> Delete </a>
+                                {% endfor %}
+                            {% else %}
+                                <p><strong><span class="glyphicon glyphicon-thumbs-up"></span>Addresses: No address registered </strong></p>
+                            {% endif %}
+
+                        </div><!--/col-->
+                        <div class="col-xs-12 col-sm-4 text-center">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar8.png" alt="" class="center-block img-circle img-responsive profile-img">
+                        </div><!--/col-->
+
+                        <div class="col-xs-12 col-sm-4">
+                            <h2><strong> 10,7K </strong></h2>
+                            <p><small>Followers</small></p>
+                            <a class="btn btn-success btn-block" href="{% url 'address register' %}"><span class="fa fa-plus-circle"></span> Add address </a>
+                        </div><!--/col-->
+                        <div class="col-xs-12 col-sm-4">
+                            <h2><strong>35</strong></h2>
+                            <p><small>Following</small></p>
+                            <a class="btn btn-info btn-block" href="{% url 'profile edit' user.id%}"><span class="fa fa-user"></span> Edit Profile </a>
+                        </div><!--/col-->
+                        <div class="col-xs-12 col-sm-4">
+                            <h2><strong>58</strong></h2>
+                            <p><small>Snippets</small></p>
+                            <a type="button" class="btn btn-primary btn-block" href="{% url 'password edit' user.id %}"><span class="fa fa-gear"></span> Change Password </a>
+                        </div><!--/col-->
+                  </div><!--/row-->
+              </div><!--/panel-body-->
+          </div><!--/panel-->
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -30,15 +30,15 @@ class Product(models.Model):
     barcode = models.IntegerField(
 
         primary_key= True,
-        validators=( django_validators.MinLengthValidator(PRODUCT_BARCODE_LEN),
+        validators=(
         ),
         blank=False,
         null=False,
     )
 
-    name = models.IntegerField(
+    name = models.CharField(
 
-
+        max_length= INPUT_MAX_LEN,
         validators=(
             django_validators.MinLengthValidator(PRODUCT_NAME_MIN_LEN),
             validate_only_letters,
@@ -51,16 +51,16 @@ class Product(models.Model):
     type = models.CharField(
         max_length= max([len(x) for x , _ in PRODUCT_TYPES]),
         choices= PRODUCT_TYPES,
-        blank=False,
-        null=False,
+        # blank=False,
+        # null=False,
 
     )
 
     category = models.CharField(
         max_length=max([len(x) for x, _ in PRODUCT_CATEGORIES]),
-        choices= PRODUCT_CATEGORIES,
-        blank=False,
-        null=False,
+        choices = PRODUCT_CATEGORIES,
+        # blank=False,
+        # null=False,
     )
 
     origin = models.CharField(
@@ -91,20 +91,10 @@ class Product(models.Model):
 
     second_price = models.IntegerField(
 
+
         blank=True,
         null=True,
     )
-
-
-class Product_discount(models.Model):
-
-    WEEKLY = "Weekly"
-    SELLOUT = "Sellout"
-    CUSTOM = "Custom"
-
-
-
-class Product_stats():
 
     sales = models.IntegerField(
         default=0,
@@ -118,9 +108,18 @@ class Product_stats():
         null=False,
     )
 
-    product = models.OneToOneField(
-        Product,
-        on_delete= models.CASCADE,
-        primary_key= True,
-
+    promo = models.BooleanField(
+        default= False,
+        blank=False,
+        null=False,
     )
+
+
+class Product_discount(models.Model):
+
+    WEEKLY = "Weekly"
+    SELLOUT = "Sellout"
+    CUSTOM = "Custom"
+
+
+
